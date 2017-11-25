@@ -1,0 +1,59 @@
+.roundedImage {
+    border-radius: 50%;
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+.videoInfo {
+    width: 100%;
+    position: absolute;
+    top: 136px;
+}
+
+.videoInfo p {
+    float: left;
+    margin-left: 10px;
+    
+    color: black;
+    
+    text-shadow:
+   -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+     1px 1px 0 white;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+.videoPanel {
+    position: relative;
+/*    border-style: solid;
+    border-color: #7c8081;
+    border-width: 1px;*/
+    overflow: hidden;
+    height: 596px;
+}
+
+.videoPanelFix {
+    overflow: visible;
+    height: auto;
+    border: none;
+}
+
+.minHeightFix {
+    height: 360px;
+}
+
+.pageVideoFix {
+    top: -28px;
+    width: 100%;
+}
+
+.button:hover {
+    border-color: black;
+    border-width: 2px;
+}

@@ -1,5 +1,9 @@
 <?php
 
+namespace BucklesHusky\YoutubeVideo\Objects;
+
+use SilverStripe\Core\Config\Config;
+
 class YoutubeData {
     
     protected $VideoId;

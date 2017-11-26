@@ -1,8 +1,18 @@
 <?php
 
+namespace BucklesHusky\YoutubeVideo\Objects;
+
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\ReadonlyField;
+use BucklesHusky\YoutubeVideo\YoutubeVideoPage;
+use Intervention\Image\Facades\Image;
+use BucklesHusky\YoutubeVideo\Objects\YoutubeData;
+
 class YoutubeVideo extends DataObject {
     
-    private static $db=array(
+    private static $db= [
         'VideoID' => 'Text',
         'Title' => 'Text',
         'Description' => 'Text',
@@ -10,22 +20,22 @@ class YoutubeVideo extends DataObject {
         'PublishDate' => 'SS_DateTime',
         'ChannelTitle' => 'Text',
         'ChannelThumbnail' => 'Text'
-    );
+    ];
     
-    private static $has_one = array(
-        'YoutubeVideoPage' => 'YoutubeVideoPage',
-        'VideoImage'=>'Image',
-        'ChannelImage'=>'Image'
-    );
+    private static $has_one = [
+        'YoutubeVideoPage' => YoutubeVideoPage::class,
+        'VideoImage' => Image::class,
+        'ChannelImage' =>  Image::class
+    ];
     
-    static $singular_name = "Youtube Video";
-    static $plural_name = "Youtube Videos";
+    private static $singular_name = "Youtube Video";
+    private static $plural_name = "Youtube Videos";
     
-    private static $summary_fields = array (
+    private static $summary_fields = [
         'GridThumbnail' => '',
         'Title' => 'Title',
         'Description' => 'Description',
-    );
+    ];
     
     public function getGridThumbnail() {
         if ($this->VideoImage()->exists()) {

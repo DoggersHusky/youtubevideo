@@ -19,12 +19,17 @@
 		"buckleshusky/RemoteImage": "2.x-dev",
 		"unclecheese/betterbuttons": "dev-master"
     },
-	"autoload": {
-		"psr-4": {
-			"BucklesHusky\\YoutubeVideo\\": "src/"
-		}
+    "autoload": {
+            "psr-4": {
+                    "BucklesHusky\\YoutubeVideo\\": "src/"
+            }
     },
     "support": {
         "issues": ""
+    },
+    "extra": {
+        "expose": [
+            "css"
+        ]
     }
 }

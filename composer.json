@@ -1,7 +1,7 @@
 {
     "name": "buckleshusky/youtubevideo",
     "description": "Adds a new page type called YoutubeVideoPage. This page will allow the admin to quickly add their youtube videos to their site. ",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "keywords": ["silverstripe", "bitbucket", "youtube", "video"],
     "license": "BSD-3-Clause",
     "authors": [
@@ -14,17 +14,18 @@
 
     "require":
     {
-        "silverstripe/framework": "3.*",
-        "composer/installers": "*",
+        "silverstripe/framework": "^4.0",
+		"silverstripe/vendor-plugin": "^1.0",
+        "silverstripe/cms": "^4.0"
 		"buckleshusky/RemoteImage": "dev-master",
 		"unclecheese/betterbuttons": "^1.3"
     },
+	"autoload": {
+		"psr-4": {
+			"BucklesHusky\\YoutubeVideo\\": "src/"
+		}
+    },
     "support": {
         "issues": ""
-    },
-	"extra": {
-		"branch-alias": {
-			"dev-master": "1.x-dev"
-		}
-	}
+    }
 }

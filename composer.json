@@ -16,7 +16,7 @@
     {
         "silverstripe/framework": "^4.0",
 		"silverstripe/vendor-plugin": "^1.0",
-        "silverstripe/cms": "^4.0"
+        "silverstripe/cms": "^4.0",
 		"buckleshusky/RemoteImage": "dev-master",
 		"unclecheese/betterbuttons": "^1.3"
     },

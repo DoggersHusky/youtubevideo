@@ -1,5 +1,9 @@
 <?php
 
+namespace BucklesHusky\YoutubeVideo;
+
+use Page;
+
 class YoutubeVideoPage extends Page {
     
     private static $has_many = array(

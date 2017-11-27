@@ -1,14 +1,17 @@
 <?php
 
 namespace BucklesHusky\YoutubeVideo;
+use SilverStripe\Forms\GridField\GridField;
+use BucklesHusky\YoutubeVideo\Objects\YoutubeVideo;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
 use Page;
 
 class YoutubeVideoPage extends Page {
     
-    private static $has_many = array(
-        'YoutubeVideo' => 'YoutubeVideo'
-    );
+    private static $has_many = [
+        'YoutubeVideo' => YoutubeVideo::class
+    ];
     
     Public function getCMSFields() {
         //get parent cms fields

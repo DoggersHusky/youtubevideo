@@ -17,7 +17,7 @@ class YoutubeVideo extends DataObject {
         'Title' => 'Text',
         'Description' => 'Text',
         'Thumbnail' => 'Text',
-        'PublishDate' => 'SS_DateTime',
+        'PublishDate' => 'Datetime',
         'ChannelTitle' => 'Text',
         'ChannelThumbnail' => 'Text'
     ];
@@ -68,6 +68,20 @@ class YoutubeVideo extends DataObject {
         parent::onBeforeWrite();
         //get the youtube video information
         $this->getChanges();
+    }
+    
+    public function onAfterWrite() {
+        parent::onAfterWrite();
+		
+	//force the uploaded image to be published on save
+        if ($this->VideoImage()->exists() && !$this->VideoImage()->isPublished()) {
+            $this->VideoImage()->doPublish();
+        }
+        
+        //force the uploaded image to be published on save
+        if ($this->ChannelImage()->exists() && !$this->ChannelImage()->isPublished()) {
+            $this->ChannelImage()->doPublish();
+        }
     }
     
     public function getChanges() {

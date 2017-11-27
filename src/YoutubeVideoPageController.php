@@ -3,6 +3,7 @@ namespace BucklesHusky\YoutubeVideo;
 
 use SilverStripe\View\Requirements;
 use BucklesHusky\YoutubeVideo\Objects\YoutubeVideo;
+use SilverStripe\Control\HTTPRequest;
 use PageController;
 
 class YoutubeVideoPageController extends PageController {
@@ -19,7 +20,7 @@ class YoutubeVideoPageController extends PageController {
         
     }
     
-    public function showVideo(SS_HTTPRequest $request) {
+    public function showVideo(HTTPRequest $request) {
         
         $ID = $request->param('ID');
 

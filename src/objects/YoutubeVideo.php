@@ -41,7 +41,7 @@ class YoutubeVideo extends DataObject {
     
     public function getGridThumbnail() {
         if ($this->VideoImage()->exists()) {
-            return $this->VideoImage()->SetWidth(150);
+            return $this->VideoImage()->Fill(150,150);
         }
         
         return '(no image)';

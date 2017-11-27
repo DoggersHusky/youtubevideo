@@ -21,7 +21,7 @@ class YoutubeData {
      */
     public function setYouTubeVideo($videoID) {
         //Get Config
-        $config=Config::inst()->get(YoutubeData::class);
+        $config=Config::inst()->get(YoutubeData::class, 'Api');
         //set the api key from config
         $this->setKey($config);
         

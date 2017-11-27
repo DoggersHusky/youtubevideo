@@ -10,6 +10,7 @@ use BucklesHusky\YoutubeVideo\YoutubeVideoPage;
 use SilverStripe\Assets\Image;
 use BucklesHusky\YoutubeVideo\Objects\YoutubeData;
 use UncleCheese\BetterButtons\Actions\BetterButtonCustomAction;
+use RemoteImage;
 
 class YoutubeVideo extends DataObject {
     

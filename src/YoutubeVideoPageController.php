@@ -1,7 +1,9 @@
 <?php
+namespace BucklesHusky\YoutubeVideo;
 
 use SilverStripe\View\Requirements;
 use BucklesHusky\YoutubeVideo\Objects\YoutubeVideo;
+use PageController;
 
 class YoutubeVideoPageController extends PageController {
 

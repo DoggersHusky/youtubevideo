@@ -23,6 +23,6 @@ You will need to add your google api key to your config.yml
 "https://developers.google.com/youtube/v3/getting-started"
 
 ```yml
-YoutubeData:
+BucklesHusky\YoutubeVideo\Objects\YoutubeData:
     Api:  #Api key required
 ```

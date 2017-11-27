@@ -20,7 +20,7 @@ $Content
                     <h3>$Title</h3>
                 </header>
                 <div class="videoInfo">
-                    <img src="{$ChannelImage.setSize(50,50).URL}" class="roundedImage"/>
+                    <img src="{$ChannelImage.Fill(50,50).URL}" class="roundedImage"/>
                     <p>
                         $ChannelTitle
                     </p>

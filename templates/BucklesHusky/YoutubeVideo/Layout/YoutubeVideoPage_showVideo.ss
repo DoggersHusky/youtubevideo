@@ -8,7 +8,7 @@
         <div class="content videoPanel videoPanelFix">
             <section>
                 <div class="videoInfo pageVideoFix">
-                    <img src="{$ChannelImage.setSize(50,50).URL}" class="roundedImage"/>
+                    <img src="{$ChannelImage.Fill(50,50).URL}" class="roundedImage"/>
                     <p>
                         $ChannelTitle
                     </p>

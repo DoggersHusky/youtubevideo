@@ -7,7 +7,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\ReadonlyField;
 use BucklesHusky\YoutubeVideo\YoutubeVideoPage;
-use Intervention\Image\Facades\Image;
+use SilverStripe\Assets\Image;
 use BucklesHusky\YoutubeVideo\Objects\YoutubeData;
 
 class YoutubeVideo extends DataObject {

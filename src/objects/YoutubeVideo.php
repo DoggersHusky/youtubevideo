@@ -9,6 +9,7 @@ use SilverStripe\Forms\ReadonlyField;
 use BucklesHusky\YoutubeVideo\YoutubeVideoPage;
 use SilverStripe\Assets\Image;
 use BucklesHusky\YoutubeVideo\Objects\YoutubeData;
+use UncleCheese\BetterButtons\Actions\BetterButtonCustomAction;
 
 class YoutubeVideo extends DataObject {
     

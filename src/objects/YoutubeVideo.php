@@ -121,22 +121,4 @@ class YoutubeVideo extends DataObject {
         }
     }
     
-    public function getBetterButtonsActions() {
-        $fields = parent::getBetterButtonsActions();
-
-        $fields->push(BetterButtonCustomAction::create('updateMe', 'Update'));
-
-        return $fields;
-    }
-    
-    public function updateMe() {
-        $this->getChanges();
-        $this->write();
-        return "Update Completed and Changes Saved!";
-    }
-    
-    private static $better_buttons_actions = array (
-        'updateMe'
-    );
-    
 }

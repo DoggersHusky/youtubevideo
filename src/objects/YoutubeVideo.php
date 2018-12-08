@@ -9,8 +9,9 @@ use SilverStripe\Forms\ReadonlyField;
 use BucklesHusky\YoutubeVideo\YoutubeVideoPage;
 use SilverStripe\Assets\Image;
 use BucklesHusky\YoutubeVideo\Objects\YoutubeData;
-use UncleCheese\BetterButtons\Actions\BetterButtonCustomAction;
 use RemoteImage;
+use SilverStripe\Control\Controller;
+use SilverStripe\Control\Director;
 
 class YoutubeVideo extends DataObject {
     
@@ -64,6 +65,10 @@ class YoutubeVideo extends DataObject {
         $fields->removeByName('ChannelThumbnail');
         
         return $fields; 
+    }
+    
+    public function Link() {
+        return Controller::join_links(Director::baseURL(),$this->YoutubeVideoPage()->URLSegment,'showVideo',$this->ID);
     }
     
     public function onBeforeWrite() {

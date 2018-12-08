@@ -11,7 +11,7 @@ $Content
             <section>
                 <span class="fa-play"></span>
                 <% if $VideoImage %>
-                    <a href="{$Top.Link}showVideo/{$ID}" class="button" style="display: inline-flex; padding: 0px;">$VideoImage.CroppedImage(300,125)</a>
+                    <a href="$Link" class="button" style="display: inline-flex; padding: 0px;">$VideoImage.CroppedImage(300,125)</a>
                 <% else %>
                     <div style="height:300px; width:125px;">
                     </div>
@@ -20,7 +20,7 @@ $Content
                     <h3>$Title</h3>
                 </header>
                 <div class="videoInfo">
-                    <img src="{$ChannelImage.Fill(50,50).URL}" class="roundedImage"/>
+                    <img src="$Link" class="roundedImage"/>
                     <p>
                         $ChannelTitle
                     </p>

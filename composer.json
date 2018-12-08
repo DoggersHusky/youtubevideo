@@ -16,8 +16,7 @@
     {
         "silverstripe/framework": "^4.0",
 		"silverstripe/vendor-plugin": "^1.0",
-		"buckleshusky/RemoteImage": "2.x-dev",
-		"unclecheese/betterbuttons": "dev-master"
+		"buckleshusky/RemoteImage": "2.x-dev"
     },
     "autoload": {
             "psr-4": {

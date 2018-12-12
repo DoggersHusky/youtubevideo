@@ -40,6 +40,11 @@ class YoutubeVideo extends DataObject {
         'Description' => 'Description',
     ];
     
+    private static $searchable_fields = [
+        'Title',
+        'ID'
+    ];
+    
     public function getGridThumbnail() {
         if ($this->VideoImage()->exists()) {
             return $this->VideoImage()->Fill(150,150);
